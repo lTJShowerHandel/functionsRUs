@@ -13,11 +13,8 @@ def function3 (lstTeams = None) :
     # Show list of available teams
     print( f"Available teams: {lstTeams}")
     
+    # User selects a team from list
     sSelectedTeam = input( "Select a team: ")
 
-    if sSelectedTeam in lstTeams:
-        lstTeams.remove( sSelectedTeam)
-    else:
-        print( "Team not found, try again.")
-
+    # Return selected team
     return sSelectedTeam
