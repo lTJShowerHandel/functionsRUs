@@ -1,13 +1,15 @@
 # Import functions
 from function1 import welcomeMessage
+from function2 import menuOptions
 from function3 import function3
 from function4 import function4
 from function5 import display_team_record
 
+# Call function 1
 welcomeMessage()
 
+# Call function 2, returns list of teams that is stored in variable lstTeams
 lstTeams = menuOptions()
-#returns lstTeams
 
 # Intialize wins/losses for function 4
 wins = 0
