@@ -4,7 +4,7 @@
 # Uses that score to determine game outcome
 
 # Create function with parameters of home team and away team (home team parameter can potentially be removed)
-def function4(homeTeam ,awayTeam) :
+def function4(awayTeam) :
 
     # Add random function for score generation
     import random
@@ -39,7 +39,7 @@ def function4(homeTeam ,awayTeam) :
         losses += 1
     
     # Create a list containg the home team name, away team name, home team score, away team score, and outcome for home team
-    score = [homeTeam, awayTeam, home, away, outcome]
+    score = [awayTeam, home, away, outcome]
 
     # Return previously mentioned list
     return score
