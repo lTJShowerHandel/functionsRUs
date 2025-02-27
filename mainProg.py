@@ -1,15 +1,19 @@
 # Import functions
 from function1 import welcomeMessage
 from function3 import function3
+from function4 import function4
+from function5 import display_team_record
 
 welcomeMessage()
 
 lstTeams = menuOptions()
 #returns lstTeams
 
-# Function 3. Run first for home team, then loop for away teams
+# Intialize wins/losses for function 4
+wins = 0
+losses = 0
 
-
+# Function 3. Run first for home team, then loop for away teams. Returns select team from list.
 sHomeTeam = function3(lstTeams)
 
 # Removes selected team from list
