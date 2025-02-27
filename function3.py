@@ -32,5 +32,6 @@ def menuOptions():
         else:
             print("Input not accepted, please try again.")
 
+    return lstTeams 
     # NOTE FOR FUTURE BUILD MORE OPTIONS FOR THE PROGRAM ONCE THE OTHER FUNCTIONS ARE FINISHED
 
