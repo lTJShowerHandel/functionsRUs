@@ -7,8 +7,8 @@ def welcomeMessage():
     print(f"Welcome, {sName} to the womens soccer season simulation!"
         "\n\nStart by entering the number of teams in the league and enter all the team names."
         "\nAfter that you will select one of the teams to be the home team." 
-        "\nFollow the promts in the menue to run the simulation. Have fun!")
-    return sName
+        "\nFollow the promts in the menu to run the simulation. Have fun!")
+    
 
 # Call the function
 welcomeMessage()
