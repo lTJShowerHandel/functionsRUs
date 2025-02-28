@@ -9,6 +9,7 @@ def menuOptions():
 
 # # boolean and while loop that continues to display the menu while the boolean is true
     bCont = True
+    bContinue = True
     while bCont == True:
 
 # Menu input variable that displays the menu options and collects menu input
@@ -17,12 +18,22 @@ def menuOptions():
 # depending on the option input, an if statement will run a different set of code
         if iMenuOption == 1 : 
         # collect an integer that will loop the list append function
-            iTeamCount = int( input("How many teams would you like to enter? (Must be at least 2 teams, One Home team and One Away Team) "))
-            for iCount in range(0, iTeamCount) :
-        # start appending team names to the lstTeams list
-                sTeamName = input("What is the name of your team? ")
-                lstTeams.append(sTeamName)
-    
+
+            while bContinue == True: 
+
+                iTeamCount = int( input("How many teams would you like to enter? (Must be at least 2 teams, One Home team and One Away Team) "))
+
+                if iTeamCount >= 2 : 
+                    for iCount in range(0, iTeamCount) :
+                        # start appending team names to the lstTeams list
+                        sTeamName = input("What is the name of your team? ")
+                        lstTeams.append(sTeamName)
+                        bContinue = False
+
+            # if the value is less than 2 teams, restart the menu
+                else: 
+                    print("Input not accepted, please try again.")
+
     # quit program by setting boolean to false and ending the while loop
         elif iMenuOption == 2 :
             print("The program has ended.")
@@ -33,5 +44,3 @@ def menuOptions():
             print("Input not accepted, please try again.")
 
     return lstTeams 
-    # FOR FUTURE BUILD MORE OPTIONS FOR THE PROGRAM ONCE THE OTHER FUNCTIONS ARE FINISHED 
-
