@@ -44,7 +44,14 @@ while len(lstTeams) > 0 :
 function4()
 
 
+<<<<<<< Updated upstream
 
 #Function 5
 display_team_record(lstGames, sHomeTeam)
 
+=======
+    # End the loop which ends the program if quit the program menu option was chosen
+    else :
+        bCont = False
+ 
+>>>>>>> Stashed changes
