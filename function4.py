@@ -43,3 +43,6 @@ def function4(awayTeam) :
 
     # Return previously mentioned list
     return score
+
+wins = 0
+losses = 0
