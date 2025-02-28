@@ -17,7 +17,7 @@ def menuOptions():
 # depending on the option input, an if statement will run a different set of code
         if iMenuOption == 1 : 
         # collect an integer that will loop the list append function
-            iTeamCount = int( input("How many teams would you like to enter? "))
+            iTeamCount = int( input("How many teams would you like to enter? (Must be at least 2 teams, One Home team and One Away Team) "))
             for iCount in range(0, iTeamCount) :
         # start appending team names to the lstTeams list
                 sTeamName = input("What is the name of your team? ")
