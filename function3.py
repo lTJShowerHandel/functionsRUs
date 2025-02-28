@@ -9,12 +9,22 @@
 
 # Function 3 with list of teams as parameter
 def function3 (lstTeams = None) :
-
-    # Show list of available teams
-    print( f"Available teams: {lstTeams}")
     
-    # User selects a team from list
-    sSelectedTeam = input( "Select a team: ")
+    # Create continue loop to keep running if a wrong team is entered
+    bCont = True
+    while bCont == True :
+        # Show list of available teams
+        print( f"Available teams: {lstTeams}")
 
+        # User selects a team from list
+        sSelectedTeam = input( "Select a team: ")
+
+        # Remove chosen team from the list
+        if sSelectedTeam in lstTeams:
+            lstTeams.remove(sSelectedTeam)
+            bCont = False
+        else:
+            print("Team not found, try again.")
+    
     # Return selected team
-    return sSelectedTeam
+    return sSelectedTeam, lstTeams
