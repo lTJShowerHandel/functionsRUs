@@ -37,26 +37,24 @@ while bCont == True :
         # Call Function 5 to display the game outcomes and season record for home team
         display_team_record(lstGames, sHomeTeam)
 
-        # Create a boolean variable for play again message loop
-        bCont2 = True
-        while bCont2 == True :
+
 
             #try and except to deal with incorrect inputs
-            try :
+        try :
 
-                # Give user a menu with options to play again and get input of number assosicated with choice
-                iPlayAgain = int(input("\nWould you like to play again?\n1. Yes\n2. No\nEnter number assoicated with choice: "))
-                if iPlayAgain == 1 :
-                    print("Go again:")
-                elif iPlayAgain == 2 :
+            # Give user a menu with options to play again and get input of number assosicated with choice
+            iPlayAgain = int(input("\nWould you like to play again?\n1. Yes\n2. No\nEnter number assoicated with choice: "))
+            if iPlayAgain == 1 :
+                print("Go again:")
+            elif iPlayAgain == 2 :
 
-                    # End both loops which ends the program
-                    print("Thanks for playing!")
-                    bCont = False
-                    bCont2 = False
-                else :
-                    print("Input not accepted, please try again.")
-            except :
+                # End both loops which ends the program
+                print("Thanks for playing!")
+                bCont = False
+                bCont2 = False
+            else :
+                print("Input not accepted, please try again.")
+        except :
                 print("Input not accepted, please try again.")
 
     # End the loop which ends the program if quit the program menu option was chosen

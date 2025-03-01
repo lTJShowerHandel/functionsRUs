@@ -14,17 +14,18 @@ def function3 (lstTeams = None) :
     bCont = True
     while bCont == True :
         # Show list of available teams
-        print( f"Available teams: {lstTeams}")
+        print("Available teams:")
+        for team in lstTeams:
+            print(f"- {team}")
 
         # User selects a team from list
         sSelectedTeam = input( "Select a team: ")
 
-        # Remove chosen team from the list
         if sSelectedTeam in lstTeams:
+            # Remove the chosen team from the list
             lstTeams.remove(sSelectedTeam)
-            bCont = False
+            # Return the selected team and the updated list
+            return sSelectedTeam, lstTeams
         else:
-            print("Team not found, try again.")
-    
-    # Return selected team
-    return sSelectedTeam, lstTeams
+            print("Team not found, please try again.")
+

@@ -13,17 +13,25 @@ def menuOptions():
 
 # Menu input variable that displays the menu options and collects menu input
         try :
-            iMenuOption = int( input( "Menu \n1. Start game \n2. Quit the Program \nEnter one of the numbers associated with the above options: "))
+            iMenuOption = int( input( "Menu \n1. Input teams \n2. Quit the Program \nEnter one of the numbers associated with the above options: "))
 
     # depending on the option input, an if statement will run a different set of code
-            if iMenuOption == 1 : 
-            # collect an integer that will loop the list append function
-                iTeamCount = int( input("How many teams would you like to enter? "))
-                for iCount in range(0, iTeamCount) :
-            # start appending team names to the lstTeams list
-                    sTeamName = input("Enter team name: ")
-                    lstTeams.append(sTeamName)
-                bCont = False
+            if iMenuOption == 1:
+                while True:
+                    try:
+                        # Prompt user for the number of teams
+                        iTeamCount = int(input("How many teams would you like to enter? "))
+                        if iTeamCount < 2:
+                            print("Please enter at least two teams.")
+                        else:
+                            # Collect team names
+                            for i in range(iTeamCount):
+                                sTeamName = input(f"Enter team name {i + 1}: ")
+                                lstTeams.append(sTeamName)
+                            bCont = False
+                            break
+                    except ValueError:
+                        print("Invalid input. Please enter a valid number.")
         # quit program by setting boolean to false and ending the while loop
             elif iMenuOption == 2 :
                 print("The program has ended.")
