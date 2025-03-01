@@ -1,5 +1,5 @@
 # IS303 - 004
-# Team 7: Aaron Garry, Blane Santilli, Henry Tuttle, Asher Swartzberg, Mikellle Burnett, Silviano Gaona
+# Team 7: Aaron Garry, Blane Santilli, Henry Tuttle, Asher Swartzberg, Mikelle Burnett, Silviano Gaona
 # Functions R Us Women's Soccer Project
 # Program asks for user's name then starts the game which gets them to input the teams and runs a soccer season simulation
 
@@ -51,5 +51,5 @@ while bCont == True :
             else:
                 print("Invalid input. Please enter 'yes' or 'no'.")
     else:
-        print("The program has ended.")
+        print("Goodbye.")
         bCont = False  # Exit the main loop
