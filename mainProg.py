@@ -20,7 +20,7 @@ while bCont == True :
 
     if iMenuOption == 1 :
         # Function 3. Run first for home team, then loop for away teams. Returns select team from list.
-        print("\n6 foot dungeons, chill bot")
+        print("\n6 Choose a home team:")
         sHomeTeam, lstTeams = function3(lstTeams)
 
         # Intialize list of games
