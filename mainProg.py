@@ -38,25 +38,18 @@ while bCont == True :
         display_team_record(lstGames, sHomeTeam)
 
 
-
-            #try and except to deal with incorrect inputs
-        try :
-
-            # Give user a menu with options to play again and get input of number assosicated with choice
-            iPlayAgain = int(input("\nWould you like to play again?\n1. Yes\n2. No\nEnter number assoicated with choice: "))
-            if iPlayAgain == 1 :
-                print("Go again:")
-            elif iPlayAgain == 2 :
-
-                # End both loops which ends the program
+    # Loop to prompt user to play again
+        valid_input_received = False
+        while not valid_input_received:
+            play_again = input("\nWould you like to play again? (yes/no): ").strip().lower()
+            if play_again == 'yes':
+                valid_input_received = True  # Valid input received; exit loop
+            elif play_again == 'no':
                 print("Thanks for playing!")
-                bCont = False
-                bCont2 = False
-            else :
-                print("Input not accepted, please try again.")
-        except :
-                print("Input not accepted, please try again.")
-
-    # End the loop which ends the program if quit the program menu option was chosen
-    else :
-        bCont = False
+                valid_input_received = True  # Valid input received; exit loop
+                bCont = False  # Exit the main loop
+            else:
+                print("Invalid input. Please enter 'yes' or 'no'.")
+    else:
+        print("The program has ended.")
+        bCont = False  # Exit the main loop
