@@ -20,7 +20,7 @@ while bCont == True :
 
     if iMenuOption == 1 :
         # Function 3. Run first for home team, then loop for away teams. Returns select team from list.
-        print("\nChoose a home team:")
+        print("\n6 Choose a home team:")
         sHomeTeam, lstTeams = function3(lstTeams)
 
         # Intialize list of games
@@ -41,7 +41,7 @@ while bCont == True :
     # Loop to prompt user to play again
         valid_input_received = False
         while not valid_input_received:
-            play_again = input("\nWould you like to play again? (yes/no): ").strip().lower()
+            play_again = input("\nWould you like to play again? (yes/no): ").lower()
             if play_again == 'yes':
                 valid_input_received = True  # Valid input received; exit loop
             elif play_again == 'no':
